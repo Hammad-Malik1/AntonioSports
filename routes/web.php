@@ -14,10 +14,11 @@ use App\Http\Controllers\ProductController;
 |
 */
 
-Route::get('/', function () {
-    return view('index');
-})->name('index');
+// Route::get('/', function () {
+//     return view('index');
+// })->name('index');
 
+Route::get('/index',[ProductController::class,'index'])->name('index');
 Route::get('/leather_Accessories',[ProductController::class,'callleather'])->name('leather');
 Route::get('/casual_Accessories',[ProductController::class,'callcasual'])->name('casual');
 Route::get('/fitness_Accessories',[ProductController::class,'callfitness'])->name('fitness');
